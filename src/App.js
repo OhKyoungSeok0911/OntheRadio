@@ -101,7 +101,7 @@ function PaymentSuccess() {
     return (
       <div className="app">
         <div className="card payment-result">
-          <div className="result-icon loading">⏳</div>
+          <div className="result-icon loading"><span role="img" aria-label="로딩">⏳</span></div>
           <h1>결제 처리 중...</h1>
           <p>잠시만 기다려주세요.</p>
         </div>
@@ -113,7 +113,7 @@ function PaymentSuccess() {
     return (
       <div className="app">
         <div className="card payment-result">
-          <div className="result-icon error">❌</div>
+          <div className="result-icon error"><span role="img" aria-label="오류">❌</span></div>
           <h1>결제 승인 실패</h1>
           <p className="error-text">{error}</p>
           <div className="countdown">
@@ -130,7 +130,7 @@ function PaymentSuccess() {
   return (
     <div className="app">
       <div className="card payment-result success">
-        <div className="result-icon success">✅</div>
+        <div className="result-icon success"><span role="img" aria-label="성공">✅</span></div>
         <h1>결제 완료!</h1>
         <p className="success-message">주문이 성공적으로 완료되었습니다.</p>
         
@@ -197,7 +197,7 @@ function PaymentCancel() {
   return (
     <div className="app">
       <div className="card payment-result cancel">
-        <div className="result-icon cancel">🚫</div>
+        <div className="result-icon cancel"><span role="img" aria-label="취소">🚫</span></div>
         <h1>결제 취소</h1>
         <p>결제가 취소되었습니다.</p>
         <p className="sub-text">다시 주문하시려면 아래 버튼을 클릭해주세요.</p>
@@ -238,7 +238,7 @@ function PaymentFail() {
   return (
     <div className="app">
       <div className="card payment-result fail">
-        <div className="result-icon fail">❌</div>
+        <div className="result-icon fail"><span role="img" aria-label="실패">❌</span></div>
         <h1>결제 실패</h1>
         <p>결제 처리 중 문제가 발생했습니다.</p>
         <p className="sub-text">다시 시도해주세요. 문제가 계속되면 고객센터로 문의해주세요.</p>
