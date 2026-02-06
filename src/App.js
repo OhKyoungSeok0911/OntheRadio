@@ -215,7 +215,7 @@ function App() {
     <div className="app">
       <div className="card">
         <div className="foodtruck-header">
-          <div className="foodtruck-icon">🚚</div>
+          <div className="foodtruck-icon"><span role="img" aria-label="푸드트럭">🚚</span></div>
           <h1 className="app-title">푸드트럭 주문</h1>
           <div className="foodtruck-subtitle">맛있는 음식을 주문하세요!</div>
         </div>
