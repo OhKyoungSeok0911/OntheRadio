@@ -511,6 +511,184 @@
   font-style: italic;
 }
 
+/* 결제 결과 페이지 */
+.payment-result {
+  text-align: center;
+  padding: 40px 30px;
+}
+
+.payment-result h1 {
+  font-size: 32px;
+  margin-bottom: 15px;
+  font-weight: 900;
+}
+
+.payment-result p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.payment-result .sub-text {
+  font-size: 14px;
+  color: #999;
+}
+
+.payment-result .error-text {
+  color: #c62828;
+  background: #ffebee;
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.result-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.result-icon.loading {
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.payment-result.success h1 {
+  color: #4CAF50;
+}
+
+.payment-result.cancel h1 {
+  color: #FF9800;
+}
+
+.payment-result.fail h1 {
+  color: #f44336;
+}
+
+/* 영수증 */
+.receipt {
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 25px 0;
+  border: 3px solid #4CAF50;
+  text-align: left;
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.2);
+}
+
+.receipt h3 {
+  font-size: 20px;
+  color: #4CAF50;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px dashed #4CAF50;
+  text-align: center;
+  font-weight: 800;
+}
+
+.receipt-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #e0e0e0;
+  font-size: 15px;
+}
+
+.receipt-item:last-child {
+  border-bottom: none;
+}
+
+.receipt-item span:first-child {
+  color: #666;
+  font-weight: 500;
+}
+
+.receipt-item span:last-child {
+  color: #333;
+  font-weight: 700;
+}
+
+.receipt-item .amount {
+  color: #4CAF50;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+/* 카운트다운 */
+.countdown {
+  margin: 25px 0;
+  padding: 20px;
+  background: linear-gradient(135deg, #FFE66D 0%, #FFD93D 100%);
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  box-shadow: 0 4px 15px rgba(255, 230, 109, 0.4);
+}
+
+.countdown-number {
+  display: inline-block;
+  font-size: 36px;
+  font-weight: 900;
+  color: #FF6B6B;
+  margin-right: 5px;
+  animation: pulse 1s ease-in-out infinite;
+  min-width: 45px;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
+}
+
+.payment-result .btn {
+  margin-top: 10px;
+  padding: 16px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.payment-result .btn-primary {
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF8E8E 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+}
+
+.payment-result .btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+}
+
 /* 반응형 디자인 */
 @media (max-width: 600px) {
   .app {
@@ -573,5 +751,25 @@
 
   .order-total-amount {
     font-size: 24px;
+  }
+
+  .payment-result {
+    padding: 30px 20px;
+  }
+
+  .payment-result h1 {
+    font-size: 26px;
+  }
+
+  .result-icon {
+    font-size: 60px;
+  }
+
+  .countdown-number {
+    font-size: 30px;
+  }
+
+  .receipt {
+    padding: 20px;
   }
 }
