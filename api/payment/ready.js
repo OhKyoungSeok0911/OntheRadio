@@ -1,15 +1,8 @@
 const axios = require('axios');
 
-// Secret Key 가져오기 (테스트 중에는 DEV 키 사용)
+// Secret Key 가져오기 (운영 모드: PRD 키 사용)
 const getSecretKey = () => {
-  // 테스트 모드: 항상 DEV 키 사용
-  // 실제 운영 시 아래 주석 해제하고 위 줄 삭제
-  return process.env.KAKAO_SECRET_KEY_DEV;
-  
-  // const isDev = process.env.NODE_ENV !== 'production';
-  // return isDev 
-  //   ? process.env.KAKAO_SECRET_KEY_DEV 
-  //   : process.env.KAKAO_SECRET_KEY_PRD;
+  return process.env.KAKAO_SECRET_KEY_PRD;
 };
 
 module.exports = async (req, res) => {
@@ -32,7 +25,7 @@ module.exports = async (req, res) => {
 
   try {
     const {
-      cid = 'TC0ONETIME',
+      cid = 'CQP987001835703',
       partner_order_id,
       partner_user_id,
       item_name,
