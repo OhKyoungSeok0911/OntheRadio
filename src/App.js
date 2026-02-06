@@ -348,7 +348,7 @@ function OrderPage() {
 
     try {
       const paymentRequestData = {
-        cid: 'CQP987001835703', // 실제 가맹점 코드
+        // cid는 백엔드에서 환경변수로 관리
         partner_order_id: `ORDER_${Date.now()}`,
         partner_user_id: 'user123',
         item_name: cart.length === 1 

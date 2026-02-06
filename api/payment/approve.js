@@ -5,6 +5,11 @@ const getSecretKey = () => {
   return process.env.KAKAO_SECRET_KEY_PRD;
 };
 
+// 가맹점 코드 가져오기
+const getCID = () => {
+  return process.env.KAKAO_CID || 'TC0ONETIME';
+};
+
 module.exports = async (req, res) => {
   // CORS 헤더 설정
   res.setHeader('Access-Control-Allow-Credentials', true);
@@ -24,7 +29,7 @@ module.exports = async (req, res) => {
 
   try {
     const {
-      cid = 'CQP987001835703', // 실제 가맹점 코드
+      cid = getCID(), // 환경변수에서 가맹점 코드 가져오기
       tid,
       partner_order_id,
       partner_user_id,
