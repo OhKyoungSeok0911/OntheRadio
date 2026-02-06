@@ -22,10 +22,6 @@
       "src": "/(.*)",
       "dest": "/$1"
     }
-  ],
-  "env": {
-    "KAKAO_SECRET_KEY_DEV": "@kakao_secret_key_dev",
-    "KAKAO_SECRET_KEY_PRD": "@kakao_secret_key_prd"
-  }
+  ]
 }
 
