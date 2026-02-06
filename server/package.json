@@ -1,0 +1,20 @@
+{
+  "name": "vocatest-server",
+  "version": "1.0.0",
+  "description": "카카오페이 결제 백엔드 서버",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
+
