@@ -120,7 +120,7 @@ function App() {
     try {
       // 결제 요청 데이터
       const paymentRequestData = {
-        cid: 'CQP987001835703', // 실제 가맹점 코드
+        cid: 'TC0ONETIME', // 테스트용 가맹점 코드
         partner_order_id: `ORDER_${Date.now()}`,
         partner_user_id: 'user123',
         item_name: cart.length === 1 
