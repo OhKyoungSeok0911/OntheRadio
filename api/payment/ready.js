@@ -1,11 +1,15 @@
 const axios = require('axios');
 
-// Secret Key 가져오기
+// Secret Key 가져오기 (테스트 중에는 DEV 키 사용)
 const getSecretKey = () => {
-  const isDev = process.env.NODE_ENV !== 'production';
-  return isDev 
-    ? process.env.KAKAO_SECRET_KEY_DEV 
-    : process.env.KAKAO_SECRET_KEY_PRD;
+  // 테스트 모드: 항상 DEV 키 사용
+  // 실제 운영 시 아래 주석 해제하고 위 줄 삭제
+  return process.env.KAKAO_SECRET_KEY_DEV;
+  
+  // const isDev = process.env.NODE_ENV !== 'production';
+  // return isDev 
+  //   ? process.env.KAKAO_SECRET_KEY_DEV 
+  //   : process.env.KAKAO_SECRET_KEY_PRD;
 };
 
 module.exports = async (req, res) => {
